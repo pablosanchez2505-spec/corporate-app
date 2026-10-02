@@ -32,11 +32,9 @@ import { ProductsService } from '../../services/products.service';
 export class ProductosPage implements OnInit {
   products: any = [];
 
-  constructor(
-    private productService: ProductsService
-  ){}
+  constructor(private productService: ProductsService) {}
 
-  async ngOnInit() {
-    this.products = await this.productService.getProducts();
+  ngOnInit() {
+    this.products = this.productService.getProducts();
   }
 }

@@ -4,23 +4,24 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
   <ion-grid>
-    <ion-row class="header">
-      <ion-col>ID</ion-col>
-      <ion-col>Nombre</ion-col>
-      <ion-col>Unidades</ion-col>
-      <ion-col>Precio</ion-col>
-      <ion-col>Foto</ion-col>
+    <!-- Cabeceras del Grid -->
+    <ion-row style="font-weight: bold; border-bottom: 2px solid #444; padding-bottom: 8px;">
+      <ion-col size="1">ID</ion-col>
+      <ion-col size="3">Nombre</ion-col>
+      <ion-col size="2">Unidades</ion-col>
+      <ion-col size="2">Precio</ion-col>
+      <ion-col size="4">Vendedor</ion-col>
     </ion-row>
-    <ion-row *ngFor="let product of products">
-      <ion-col>{{product.id}}</ion-col>
-      <ion-col>{{product.nombre}}</ion-col>
-      <ion-col>{{product.unidades}}</ion-col>
-      <ion-col>{{product.precio}} €</ion-col>
-      <ion-col>
-        <img [src]="product.foto" width="80">
-      </ion-col>
+
+    <!-- Filas dinámicas con los 3 productos -->
+    <ion-row *ngFor="let p of products" style="align-items: center; border-bottom: 1px solid #333; padding: 10px 0;">
+      <ion-col size="1">{{ p.id }}</ion-col>
+      <ion-col size="3">{{ p.nombre }}</ion-col>
+      <ion-col size="2">{{ p.unidades }}</ion-col>
+      <ion-col size="2">{{ p.precio }} €</ion-col>
+      <ion-col size="4" style="color: var(--ion-color-medium);">{{ p.vendedor }}</ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>

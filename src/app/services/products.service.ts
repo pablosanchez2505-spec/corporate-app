@@ -5,9 +5,11 @@ import { Product } from '../models/product.interface';
   providedIn: 'root'
 })
 export class ProductsService {
-  async getProducts(): Promise<Product[]> {
-    const response = await fetch('assets/data/products.json');
-    const products = await response.json();
-    return products;
+  getProducts(): Product[] {
+    return [
+      { id: 1, nombre: 'Consultoría Cloud', unidades: 10, precio: 300, vendedor: 'Ana Gómez' },
+      { id: 2, nombre: 'Desarrollo de App', unidades: 5, precio: 900, vendedor: 'Carlos Ruiz' },
+      { id: 3, nombre: 'Auditoría Web', unidades: 8, precio: 500, vendedor: 'Lucía Fernández' }
+    ];
   }
 }

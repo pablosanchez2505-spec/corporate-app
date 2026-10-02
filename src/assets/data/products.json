@@ -1,16 +1,23 @@
 [
   {
     "id": 1,
-    "nombre": "Portátil Dell",
-    "unidades": 12,
-    "precio": 1200,
-    "foto": "assets/images/dell.jpg"
+    "nombre": "Consultoría Cloud",
+    "unidades": 10,
+    "precio": 300,
+    "vendedor": "Ana Gómez"
   },
   {
     "id": 2,
-    "nombre": "Monitor LG",
+    "nombre": "Desarrollo de App",
+    "unidades": 5,
+    "precio": 900,
+    "vendedor": "Carlos Ruiz"
+  },
+  {
+    "id": 3,
+    "nombre": "Auditoría Web",
     "unidades": 8,
-    "precio": 299,
-    "foto": "assets/images/lg.jpg"
+    "precio": 500,
+    "vendedor": "Lucía Fernández"
   }
 ]
