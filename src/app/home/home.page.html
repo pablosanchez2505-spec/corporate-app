@@ -1,20 +1,24 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Inicio - Corporate App</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding ion-text-center">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Bienvenido a nuestra aplicación corporativa</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Selecciona una de las opciones para navegar por el sistema:
+    </ion-card-content>
+  </ion-card>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-button expand="block" routerLink="/productos" color="primary" class="ion-margin-top">
+    Ver Catálogo de Productos
+  </ion-button>
+
+  <ion-button expand="block" routerLink="/nosotros" color="secondary" class="ion-margin-top">
+    Sobre Nosotros y Ubicación
+  </ion-button>
 </ion-content>

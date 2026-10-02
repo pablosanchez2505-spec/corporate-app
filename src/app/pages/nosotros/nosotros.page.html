@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Sobre Nosotros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Nuestra Empresa</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Somos una empresa líder en el sector tecnológico. Nuestra sede central se encuentra en Madrid. ¡Pulsa el botón inferior para calcular la distancia desde tu ubicación actual hasta nuestra oficina!
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Geolocalización y Distancia</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button expand="block" (click)="obtenerUbicacion()" color="primary" class="ion-margin-bottom">
+        Calcular mi distancia a la empresa
+      </ion-button>
+
+      <div *ngIf="latitude !== null && longitude !== null">
+        <ion-item>
+          <ion-label>
+            <strong>Tu Latitud:</strong> {{ latitude }}
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <strong>Tu Longitud:</strong> {{ longitude }}
+          </ion-label>
+        </ion-item>
+        <ion-item *ngIf="distance !== null">
+          <ion-label color="success">
+            <strong>Distancia a la sede:</strong> {{ distance }} km
+          </ion-label>
+        </ion-item>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
